@@ -1,0 +1,48 @@
+
+Procedure compmove;
+var
+i,a:byte ;
+err:shortint;
+procedure compTest;
+var
+ chr_pos:byte;
+	function Min_Possibly_Pos(pos:byte):byte;
+	begin
+	 if pch[1]<pch[2] then
+		if (plf2[pos+pch[1]]>=0) and (pch[1]<>0) then
+			 Min_Possibly_Pos:=(pos+pch[1])
+		else
+	 else
+	 if (plf2[pos+pch[2]]>=0) and (pch[2]<>0) then
+		Min_Possibly_Pos:=(pos+pch[2])
+	 else
+		if (plf2[pos+pch[2]+pch[1]]>=0) and (pch[1]<>0)and (pch[2]<>0)then
+		 Min_Possibly_Pos:=(pos+pch[2]+pch[1]);
+	end;{Min_Possssibly_Pos}
+
+begin
+ if plf2[i]>a  then
+	begin
+		Delay(1000);
+		Fhk.select(pl_2,i,err);
+	 potpos:=i+Min_Possibly_Pos(i);
+	 fhk.move(pl_2);
+
+	 if (Pch[1]+Pch[2])=0 then
+		movemaked:=true
+	end;
+end;
+var
+quont:byte ;
+BEGIN{main proc}
+ movemaked:=false;
+ somsselect:=false;
+	for a:=1 downto 0 do
+	 repeat
+	 if TotalPossibility(pl_2) then
+		for I:=24 downto 0 do
+		 Comptest
+	 else
+		exit;
+	 until not(movemaked)
+END;
