@@ -1,0 +1,39 @@
+Points v 1.0
+Help File
+
+Target of game
+	Round points of your anemy
+
+Method
+
+	You and you partners will make move one by one.
+		For one move you can poot one point.
+		If you want to exit the game press ESC.
+		Computer woldn't finish game authomaticly,
+		You must finish it by yourself.
+
+
+	Now look
+		 x - Points of your anemy
+		 + - Your points
+
+             +
+            / \
+           + x +
+            \ /
+			 +
+
+		Or
+            +-+-+-+-+
+           /    |    \
+		  + x x + x x +
+		   \   / \    |
+            +-+   +-+-+
+
+	For one time you can round one or more points.
+
+	After every move computer looking can you round something or not
+		and if you can he round it.
+		If you have score large then your partner then you WINNER.
+
+
